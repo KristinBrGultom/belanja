@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:navigasi/models/item.dart';
 
-class CardItemWidget extends StatelessWidget {
-  const CardItemWidget({
+class CardWidget extends StatelessWidget {
+  const CardWidget({
     Key? key,
-    required this.name,
-    required this.quantity,
-    required this.price,
+    required this.item,
   }) : super(key: key);
 
-  final String name;
-  final int quantity;
-  final int price;
+  final Item item;
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +16,16 @@ class CardItemWidget extends StatelessWidget {
         margin: const EdgeInsets.all(8),
         child: Row(
           children: [
-            Expanded(child: Text(name)),
+            Expanded(child: Text(item.name)),
             Expanded(
               child: Text(
-                quantity.toString(),
+                item.quantity.toString(),
                 textAlign: TextAlign.center,
               ),
             ),
             Expanded(
               child: Text(
-                price.toString(),
+                '${item.price}',
                 textAlign: TextAlign.end,
               ),
             ),

@@ -36,6 +36,4 @@ class ItemPage extends StatelessWidget {
       ),
     );
   }
-
-  CardItemWidget({String? name, int? quantity, int? price}) {}
 }
